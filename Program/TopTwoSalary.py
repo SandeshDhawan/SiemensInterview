@@ -1,16 +1,15 @@
 import csv
 
-dict = {}
 with open('TestData.csv', mode='r') as file:
     # reading the CSV file
     csvFile = csv.DictReader(file)
 
     # Initialized max and min to First Employee Salary
-    for a in csvFile:
-        max = int(a["Salary"])
-        min = int(a["Salary"])
-        maxSalary = a
-        minSalary = a
+    for value in csvFile:
+        max = int(value["Salary"])
+        min = int(value["Salary"])
+        maxSalary = value
+        minSalary = value
         break
 
     # Comparing a salary and if it is maximum then assigning to a max variable and whole record to a maxSalary
